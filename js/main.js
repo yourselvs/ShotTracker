@@ -12,10 +12,13 @@ window.onload = function () {
     });
 
     // Sample code
-    var textbox = document.querySelector('.contents');
+    var textbox = document.querySelector('#textbox');
     textbox.addEventListener("click", function(){
-    	box = document.querySelector('#textbox');
-    	box.innerHTML = box.innerHTML == "Basic" ? "Sample" : "Basic";
+    	textbox.innerHTML = textbox.innerHTML == "Basic" ? "Sample" : "Basic";
     });
     
+    var missbox = document.querySelector('#missbox');
+    missbox.addEventListener("click", function(){
+    	missbox.innerHTML = missbox.innerHTML == "Miss" ? "Make" : "Miss";
+    });
 };
