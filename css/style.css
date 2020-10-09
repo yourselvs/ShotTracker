@@ -7,17 +7,52 @@ body {
     background-color:#222;
 }
 
+.pad-buttons {
+	padding-top:70px;
+	padding-bottom:10px;
+}
+
+.pad-text {
+	padding-left:5px;
+	padding-right:5px;
+}
+
 .contents {
 	display: flex;
-	display: -webkit-flex;
+    display: -webkit-flex;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	height:320px;
 }
 
+.quadrant {
+	height:120px;
+	width:120px;
+}
+
+.options-row {
+	align-items:center;
+	justify-content:center;
+	padding-top:10px;
+}
+
+.options-button {
+	padding-right:20px;
+	padding-left:20px;
+}
+
+.text_div {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	border:3px solid white;
+	padding-left:5px;
+	padding-right:5px;
+}
 
 .content_text {
 	font-weight:bold;
-	font-size:3em;
+	font-size:2em;
 	color:#fff;
+	line-height:40px;
 }

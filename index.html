@@ -17,21 +17,29 @@
     <div class=contents id=contents>
       <div style='margin:auto;'>
         
-        <div class="row align-items-center">
-          <div class="col" style='margin:auto;'>
-    	    <span class=content_text id=textbox>Basic</span>
+        <div class="pad-buttons row align-items-center">
+          <div class="col-6" style='margin:auto;'>
+            <button type="button" class="quadrant btn btn-lg btn-block btn-success" id=makebutton>Make</button>
           </div> 
-          <div class="col">
-            <span class=content_text id=missbox>Miss</span>
+          <div class="col-6">
+            <button type="button" class="quadrant btn btn-lg btn-block btn-danger" id=missbutton>Miss</button>
           </div>
         </div>
         <!--  <div class="w-100"></div>  -->
         <div class="row align-items-center">
-          <div class="col" id="stats">
-            <span class=content_text id=statsbox>5/10</span>
+          <div class="col-6 text_div">
+              <span class="content_text" id=stats>0/0</span>
           </div>
-          <div class="col" id="time">
-            <span class=content_text id=timebox>2:20</span>
+          <div class="col-6 text_div">
+              <span class="content_text" id=percentage>0%</span>
+          </div>
+        </div>
+        <div class="row options-row">
+          <div class=options-button>
+            <button type="button" class="btn btn-lg btn-warning" id=editbutton>Edit</button>
+          </div>
+          <div class=options-button>
+            <button type="button" class="btn btn-lg btn-light" id=resetbutton>Reset</button>
           </div>
         </div>
       </div>
