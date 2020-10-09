@@ -1,7 +1,4 @@
-
-
 window.onload = function () {
-    // TODO:: Do your initialization job
     var contents = document.querySelector('#contents');
 	var stats = document.querySelector("#stats");
     var percentage = document.querySelector("#percentage");
@@ -17,13 +14,12 @@ window.onload = function () {
 	
 	var updateText = function () {
 		var numTotal = numMakes + numMisses;
-		//numTotal = numTotal == 0? 1 : numTotal;
-		var numPercentage = (numMakes / (numTotal == 0? 1 : numTotal)) * 100
+		var numPercentage = (numMakes / (numTotal === 0? 1 : numTotal)) * 100;
 		var numPercentageTrim = numPercentage.toFixed(2);
 		
 		stats.innerHTML = numMakes + "/" + numTotal;
 		percentage.innerHTML = numPercentageTrim + "%";
-	}	
+	};
 	
 	var enterEditMode = function () {
 		editButton.classList.remove("btn-warning");
@@ -34,7 +30,7 @@ window.onload = function () {
 		missButton.innerHTML = "Miss -1";
 
 		incrementor = -1;
-	}
+	};
 	
 	var exitEditMode = function () {
 		editButton.classList.remove("btn-primary");
@@ -45,9 +41,8 @@ window.onload = function () {
 		missButton.innerHTML = "Miss";
 		
 		incrementor = 1;
-	}
+	};
 
-    // add eventListener for tizenhwkey
     document.addEventListener('tizenhwkey', function(e) {
         if(e.keyName === "back") {
         	try {
@@ -59,7 +54,7 @@ window.onload = function () {
 
 	contents.addEventListener("click", function(){
 		updateText();
-	})
+	});
     
     makeButton.addEventListener("click", function(){
     	numMakes += incrementor;
@@ -72,7 +67,7 @@ window.onload = function () {
     });
     
     editButton.addEventListener("click", function(){
-    	if(editButton.innerHTML == "Edit") {
+    	if(editButton.innerHTML === "Edit") {
     		enterEditMode();
     	} else {
     		exitEditMode();
@@ -80,7 +75,7 @@ window.onload = function () {
     });
     
     resetButton.addEventListener("click", function() {
-    	if(editButton.innerHTML == "Save") {
+    	if(editButton.innerHTML === "Save") {
     		exitEditMode();
     	}
     	
