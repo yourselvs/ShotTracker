@@ -8,8 +8,8 @@ body {
 }
 
 .pad-buttons {
-	padding-top:70px;
-	padding-bottom:10px;
+	padding-top:60px;
+	padding-bottom:15px;
 }
 
 .pad-text {
@@ -26,7 +26,7 @@ body {
 }
 
 .quadrant {
-	height:120px;
+	height:80px;
 	width:120px;
 }
 

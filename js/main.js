@@ -4,6 +4,7 @@ window.onload = function () {
     var percentage = document.querySelector("#percentage");
     var makeButton = document.querySelector('#makebutton');
     var missButton = document.querySelector('#missbutton');
+    var progressBar = document.querySelector('#progressbar');
     var editButton = document.querySelector('#editbutton');
     var resetButton = document.querySelector('#resetbutton');
     
@@ -16,9 +17,11 @@ window.onload = function () {
 		var numTotal = numMakes + numMisses;
 		var numPercentage = (numMakes / (numTotal === 0? 1 : numTotal)) * 100;
 		var numPercentageTrim = numPercentage.toFixed(2);
+		var numPercentageProgress = numPercentage.toFixed(0);
 		
 		stats.innerHTML = numMakes + "/" + numTotal;
 		percentage.innerHTML = numPercentageTrim + "%";
+		progressBar.setAttribute("style", "width:" + numPercentageProgress.toString() + "%;");
 	};
 	
 	var enterEditMode = function () {
